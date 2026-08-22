@@ -54,6 +54,33 @@ public class Aula02b {
         // Substituir parte do texto
         nomeCompleto = nomeCompleto.replace("G", "R");
         System.out.println("Nome com letra alterada: " + nomeCompleto);
+        
+        // Extrai parte do texto
+        String parteNome = nomeCompleto.substring(0, 6);
+        System.out.println("Parte do Texto: " + parteNome);
+        
+        String vazia = "";
+        String emBranco = "        ";
+        
+        // Verificar se a string está vazia
+        System.out.println("Variavel vazia: " + vazia.isEmpty());
+        
+        // Verificar se a string está em branco
+        System.out.println("Variavel em branco: " + emBranco.isBlank());
+        
+        String nomeCompleto2 = nomeCompleto;
+        
+        System.out.println("Nome Completo: " + nomeCompleto);
+        System.out.println("Nome Completo 2: " + nomeCompleto2);
+        
+        nomeCompleto = "Gaspar Galego";
+        
+        
+        System.out.println("Nome Completo: " + nomeCompleto);
+        System.out.println("Nome Completo 2: " + nomeCompleto2);
+        
+        
+        
     }
     
 }
