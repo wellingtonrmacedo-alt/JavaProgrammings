@@ -50,6 +50,20 @@ public class Aula02a {
         System.out.println("Double: " + num11);
         System.out.println("Float: " + num12);
         System.out.println("-".repeat(40));
+        
+        double num13 = 10.99;
+        int num14 = (int) num13;
+        
+        System.out.println("Double: " + num13);
+        System.out.println("Int: " + num14);
+        System.out.println("-".repeat(40));
+        
+       int num15 = 123;
+       double num16 = num15;
+       
+       System.out.println("Int: " + num15);
+       System.out.println("Double: " + num16);
+       System.out.println("-".repeat(40));
     }
     
 }
