@@ -43,6 +43,17 @@ public class Aula02b {
         
         System.out.println("As variaveis nomeCompleto e nome sao iguais" +
                 " indepedente da caixa alta ou baixa: " + nomeCompleto.equalsIgnoreCase(nome2));
+        
+        nomeCompleto = "     " + nomeCompleto + "     ";
+        System.out.println("Nome Completo: " + nomeCompleto);
+        
+        // Retirar espaços em branco no inicio e fim do texto
+        nomeCompleto = nomeCompleto.trim();
+        System.out.println("Nome Completo Limpo: " + nomeCompleto);
+        
+        // Substituir parte do texto
+        nomeCompleto = nomeCompleto.replace("G", "R");
+        System.out.println("Nome com letra alterada: " + nomeCompleto);
     }
     
 }
