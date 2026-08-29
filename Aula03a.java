@@ -38,6 +38,46 @@ public class Aula03a{
 
         JOptionPane.showMessageDialog(null, msg, "Senai", 1);
 
+        int resposta = JOptionPane.showConfirmDialog(null, "Deseja continuar? ",
+                "Senai Guarulhos Dutra", JOptionPane.YES_NO_CANCEL_OPTION, 3);
+
+        if (resposta == 0){
+            JOptionPane.showMessageDialog(null, "Continuando...");
+        }else if (resposta == 1){
+            JOptionPane.showMessageDialog(null, "Finalizando...");
+        }else if (resposta == 2){
+            JOptionPane.showMessageDialog(null, "Cancelando...");
+        }else{
+            JOptionPane.showMessageDialog(null, "Nenhum botão pressionado.");
+        }
+
+        Object[] cursos = {
+                "Java", "Python", "C#", "C++"
+        };
+
+        int opt = JOptionPane.showOptionDialog(null,
+                "Qual curso deseja fazer? ",
+                "Senai Guarulhos Dutra",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                3,
+                null,
+                cursos,
+                cursos[0]);
+
+        if (opt == 0){
+            msg = "Você escolheu o curso Java";
+        }else if (opt == 1){
+            msg = "Você escolheu o curso Python";
+        }else if (opt == 2){
+            msg = "Você escolheu o curso C#";
+        }else if (opt == 3){
+            msg = "Você escolheu o curso C++";
+        }else{
+            msg = "Você não escolheu nenhum curso";
+        }
+
+        JOptionPane.showMessageDialog(null, msg);
+
     }
     
 }
