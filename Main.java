@@ -1,43 +1,22 @@
+/*
+    Nesse programa vamos estudar o uso de array
+    em Java e a manipulação de um array usando o
+    FOR.
+ */
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+public class Main{
+    public static void main(String args[]){
+        String[] alunos = {"Laura", "Fábio", "Téo", "Mateus"};
 
+        int[] idade = new int[4];
+        idade[0] = 20;
+        idade[1] = 25;
+        idade[2] = 26;
+        idade[3] = 29;
 
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-
-        SistemaLoja loja = new SistemaLoja();
-
-        loja.entradaDados();
-
-        loja.imprimirCupom();
-
-        LocalDate data = LocalDate.of(2026, 9, loja.vencimentos);
-
-        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-        double valorParcela = loja.precoParcela();
-        if(loja.numParcelas == 1){
-            valorParcela = loja.aplicarDesconto();
-            System.out.println("Parcela Única com desconto de 10% a vista: "
-            + data.format(formato) + " - R$ " + String.format("%.2f", valorParcela));
+        for(int i = 0; i < alunos.length; i++){
+            System.out.println("O aluno " + alunos[2] + " tem " + idade[2] + " anos. ");
         }
-
-        int parcela = 1;
-
-        while(parcela <= loja.numParcelas){
-            System.out.println("Parcela " + parcela + ": " + data.format(formato)
-            + " - R$ " + String.format("%.2f", valorParcela));
-
-            data = data.plusMonths(1);
-            parcela++;
-        }
-
-        loja.rodape();
-
 
     }
 }
