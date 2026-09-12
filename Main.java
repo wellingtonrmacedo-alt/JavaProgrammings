@@ -1,24 +1,36 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import javax.swing.JOptionPane;
 
-import java.util.Random;
+/**
+ * Nesse programa vamos estudar os métodos(funções) em Java,
+ * começando com métodos sem retorno e sem parâmetro
+ */
 
-public class Main {
 
-    public static void main(String[] args) {
-        Random rd = new Random();
+public class Main{
+    public static void main(String[] args){
+        // Para chamar o método de instância precisamos criar um método
+        Main pessoa = new Main();
 
-        int[] numeros = new int[5];
+        pessoa.apresentar();
 
-        for(int i = 0; i < numeros.length; i++) {
-            numeros[i] = rd.nextInt(100) + 1;
-        }
+        // Para chamar um metodo static, nao precisa criar o objeto
+        mensagem();
 
-        for(int i = 0; i < numeros.length; i++) {
-            System.out.println("Número: " + numeros[i]);
-        }
+        pessoa.apresentar();
 
+        mensagem();
 
     }
 
+    //Método de instância
+    public void apresentar(){
+        JOptionPane.showMessageDialog(null,
+                "Olá, Essa mensagem pertence a um método.");
+    }
+
+    //Método estático (static)
+    public static void mensagem(){
+        JOptionPane.showMessageDialog(null,
+                "Bem-vindo ao programa feito em java");
+    }
 }
