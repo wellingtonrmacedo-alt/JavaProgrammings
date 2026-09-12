@@ -1,22 +1,24 @@
-/*
-    Nesse programa vamos estudar o uso de array
-    em Java e a manipulação de um array usando o
-    FOR.
- */
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
-public class Main{
-    public static void main(String args[]){
-        String[] alunos = {"Laura", "Fábio", "Téo", "Mateus"};
+import java.util.Random;
 
-        int[] idade = new int[4];
-        idade[0] = 20;
-        idade[1] = 25;
-        idade[2] = 26;
-        idade[3] = 29;
+public class Main {
 
-        for(int i = 0; i < alunos.length; i++){
-            System.out.println("O aluno " + alunos[2] + " tem " + idade[2] + " anos. ");
+    public static void main(String[] args) {
+        Random rd = new Random();
+
+        int[] numeros = new int[5];
+
+        for(int i = 0; i < numeros.length; i++) {
+            numeros[i] = rd.nextInt(100) + 1;
         }
 
+        for(int i = 0; i < numeros.length; i++) {
+            System.out.println("Número: " + numeros[i]);
+        }
+
+
     }
+
 }
